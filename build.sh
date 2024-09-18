@@ -91,8 +91,10 @@ function question() {
 
 # Detect OS
 function check_os() {
-	if [ -f /etc/SUSE-brand ]; then
+	if grep -iq "suse" /etc/os-release; then
 		suse=true
+	else
+		suse=false
 	fi
 }
 
@@ -234,6 +236,7 @@ function verify_sha256 {
 function get_dependencies() {
         info "Installing dependencies"
 	if [ "$suse" = true ]; then
+		sudo zypper ref
 		for i in $SUSE_DEPEND;
        		do
                		sudo zypper in -y $i
