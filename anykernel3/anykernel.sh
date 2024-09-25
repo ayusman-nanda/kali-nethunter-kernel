@@ -6,13 +6,13 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=NetHunter Kernel for the OnePlus 7 Pro
+kernel.string=NetHunter Kernel for the Miatoll
 do.devicecheck=1
 do.modules=1
 do.systemless=0 #Never use this for NetHunter kernels as it prevents us from writing to /lib/modules
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=OnePlus7Pro
+device.name1=miatoll
 device.name2=guacamole
 device.name3=OnePlus 7 Pro
 device.name4=Guacamole
@@ -32,7 +32,7 @@ supported.patchlevels=
 
 # shell variables
 block=/dev/block/bootdevice/by-name/boot;
-is_slot_device=1;
+is_slot_device=0;
 ramdisk_compression=auto;
 
 ## AnyKernel methods (DO NOT CHANGE)
